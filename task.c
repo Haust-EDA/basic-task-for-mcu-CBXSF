@@ -21,7 +21,18 @@ int main(void)
     """
     在下方编写你的代码
     """
-    
+        #include<reg52.h>
+        void delay_ms(unsigned int nma)
+{
+        unsigned int i,j;
+
+       for(i=nms;i>0;i--)
+           for(j=113;j>0;j--);
+}
+void main()
+{
+    while（1）
+}
 
  
 
