@@ -21,8 +21,32 @@ int main(void)
     """
     在下方编写你的代码
     """
+        
     
+include <reg51.h>  
 
+#define LED_PORT P0  
+#define DELAY_MS 500 
+
+void delay_ms(unsigned int ms); 
+
+void main(void) {
+    unsigned char led_pattern = 0x01; 
+
+    while (1) { 
+        LED_PORT = ~led_pattern; 
+        delay_ms(DELAY_MS); 
+        led_pattern <<= 1; 
+        if (led_pattern == 0x00) {
+            led_pattern = 0x01;
+        }
+    }
+}
+void delay_ms(unsigned int ms) {
+    unsigned int i, j;
+    for (i = ms; i > 0; i--) {
+        for (j = 114; j > 0; j--); 
+｝
  
 
     return 0;
