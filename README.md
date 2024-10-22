@@ -27,7 +27,13 @@ void delay_ms(unsigned int x)  // 延时函数
 
 int main(void)
 {
-   // 编写你的代码
+   
+unsigned char led-on
+while(1){
+for(led_on=0x01;led_on<0x80;led_on<<=1)
+P0=led_on;
+delay_ms(500);}
+}
 
     
     
